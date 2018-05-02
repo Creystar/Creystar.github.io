@@ -1,0 +1,293 @@
+* { /* Убираем отступы и поля для всех элементов универсальным селектором */
+    margin: 0; /* Отступ от каждого края элемента */
+    padding: 0; /* Устанавливает значение полей вокруг содержимого элемента */
+}
+
+@font-face{
+    font-family: 'wf_SegoeUILight';
+    src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot');
+    src:url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.eot?#iefix') format('embedded-opentype'),
+           url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.woff') format('woff'),
+           url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.ttf') format('truetype'),
+           url('http://i.s-microsoft.com/fonts/Segoe-UI/Cyrillic/Light/latest.svg#web') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+    font-family: "wf_SegoeUILight";
+    background: #999 
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'wf_SegoeUILight';
+    text-align: center;
+    padding-top:10px;
+}
+
+#page2 h2 {
+    color: #fff;
+    padding-top: 8%
+}
+
+#page2 h3 {
+    color: #333366;
+    z-index: 40;
+    margin-bottom: 30px;
+    padding: 0 0;
+    margin-top: -10px;
+    float:left;
+    padding-left:8%;
+
+}
+.wrapper {
+    background: #fff;
+    min-width: 100%;
+    height: 3000px;
+    padding: 0 0;
+}
+ 
+#page1 {
+    background:#fff;
+    min-width: 100%;
+    height: 1000px;
+    position: relative;
+    z-index: 8;
+}
+
+/*-------HEADER-----*/
+
+.header {
+    background: url('../img/header_background.png');
+    min-width: 100%;
+    height: 500px;
+    position: absolute;
+    z-index: 8;
+    -webkit-background-size: cover; /* Для хрома */
+    -moz-background-size: cover;  /* Для лисы*/
+    -o-background-size: cover;  /* Для оперы*/
+    -ms-background-size: cover;  /* Для ИЭ*/
+    background-size: cover;  /* Для закрепления*/   
+}
+
+
+.logo { 
+    background: url('../img/logo.png');
+    position: relative;
+    padding-top: 250px;
+    margin-top: 8em;
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 3;
+    -webkit-background-size: contain; /* Для хрома */
+    -moz-background-size: contain;  /* Для лисы*/
+    -o-background-size: contain;  /* Для оперы*/
+    -ms-background-size: contain;  /* Для ИЭ*/
+    background-size: contain;  /* Для закрепления*/
+}
+
+/*-------MENU-----*/
+
+.menu {
+    background:rgba(255, 255, 255, 0.7);
+    min-width: 100%;
+    height: 50px;
+    list-style:none;
+    padding-top:2%;
+    position: fixed;
+    text-align: center;
+    z-index: 99;
+}
+
+.menu a{
+    display:inline;
+    text-decoration:none;
+    color:rgb(44, 44, 44);
+    border:none;
+    margin:0 10px;
+    padding:10px;
+    font-size:14pt; 
+}
+
+.menu li {
+    vertical-align:middle;
+    border:1px;
+    display:inline;
+}
+
+.menu a:hover {
+    background-color:rgb(81, 128, 240);
+    color:rgb(252, 252, 252);
+}
+
+/*-------END OF MENU-----*/
+
+/*----END OF HEADER----*/
+
+/*--------------------------------------------------END OF PAGE 1----------------------------------------------*/
+
+
+/*-----------------------------------------------------PAGE 2----------------------------------------------*/
+
+#page2 {
+    background: url('../img/background_page2.png');
+    min-width: 100%;
+    height: 1000px;
+    position: relative;
+    z-index: 7;
+    -webkit-background-size: cover; /* Для хрома */
+    -moz-background-size: cover;  /* Для лисы*/
+    -o-background-size: cover;  /* Для оперы*/
+    -ms-background-size: cover;  /* Для ИЭ*/
+    background-size: cover;  /* Для закрепления*/  
+}
+
+.seeker {
+    background: rgba(255, 255, 255, 0.4);
+    height: 37em;
+    width: 300px;
+    margin-top: 3em;
+    margin-left: 12%;
+    position: absolute;
+}
+
+.seeker2 {
+    background: rgba(255, 255, 255, 0.4);
+    height: 37em;
+    width: 300px;
+    margin-top: 3em;
+    margin-left: 37%;
+    position: absolute;
+}
+
+.seeker3 {
+    background: rgba(255, 255, 255, 0.4);
+    height: 37em;
+    width: 300px;
+    margin-top: 3em;
+    margin-left: 62%;
+    position: absolute;
+}
+
+.avatar {
+    border-radius: 150px; /* Радиус скругления */
+    box-shadow: 0 0 0 2px rgb(44, 44, 44), 0 0 13px #333; /* Параметры теней */
+    margin: 15% 8%;
+    text-align: center;
+    z-index: 26;
+    padding-bottom:0px;
+    margin-bottom: 10px;
+   }
+
+/*----------------PROGRESS BAR---------------------*/
+
+progress {
+    height: 25px;
+    width: 250px;
+    border: 0px solid #000;
+    color: #4184d5;
+    margin: 5px 4%;
+    margin-top:-30px;
+    padding-top: -20px;
+    z-index: 26;
+  }
+  progress::-webkit-progress-bar {
+    height: 25px;
+    width: 250px;
+    border: 0px solid #000;
+    background: #fff;
+    margin: 5px 4%;
+    margin-top:-20px;
+    padding-top: -20px;
+    z-index: 27;
+  }
+  progress::-webkit-progress-value {
+    background-color: #4184d5;
+    border-bottom: 25px solid #4184d5;
+    border-right: 25px solid #fff;
+    z-index: 28;
+  }
+/*----------------END OF PROGRESS BAR---------------------*/
+
+/*----------------------------------------------------END OF PAGE 2----------------------------------------------*/
+
+/*--------------------------------------PAGE 3---------------------------*/
+
+
+#page3 {
+    min-width: 100%;
+    height: 1000px;
+    position: relative;
+    z-index: 6;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 7;
+    background-size: cover;
+    }
+
+.contact {
+    background: rgba(255, 255, 255, 0.61);
+    max-width: 50%;
+    height: 1000px;
+    position: relative;
+    z-index: 10; 
+}
+
+.contact form {
+    width: 80%;
+    margin-left: 6em;
+    margin-top: 6em;
+    height: 10em;
+    position: absolute;
+    z-index: 61;
+    font-size: 18px;
+}
+/*-------------------YANDEX-MAP API-------------------*/
+
+.mapblock {
+    float: right;
+    opacity: 0.8; /*совместимость с IE, MS EDGE*/
+    min-width:auto;
+    height: 70%;
+    position: relative;
+    max-width: 50%;
+    z-index: 24;
+    margin-top: -1000px;
+    padding-top: 18em;
+}
+
+#map {
+    float: center;
+    margin-right: 15%;
+    padding-right: 5em;
+    width: 25em;
+    height: auto;
+    position: relative;
+    z-index: 25;
+    
+}
+
+/*-------------------END OF YANDEX-MAP-------------------*/
+
+.footer {
+    background: #333366;
+    position: absolute; /* Прижимаем футер к нижней границе окна */
+    bottom: 0;
+    width: 100%;
+    margin-top: -40px; /*Минус Высота футера*/
+    height: 50px; /*Высота футера*/
+    clear:both;
+    z-index: 55;
+    clear: both;
+}
+

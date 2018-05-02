@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Creystar - Поиск вакансий</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="keywords" content="вакансии, поиск вакансий, вакансии в ит, ит вакансии"/>
+    <meta name="author" content="Konstantin Lishavsky"/>
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&csp=true" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script>
+        $(function(){
+          SyntaxHighlighter.all();
+        });
+        $(window).load(function(){
+          $('.flexslider').flexslider({
+            animation: "slide",
+            start: function(slider){
+              $('body').removeClass('loading');
+            }
+          });
+        });
+      </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="page1">
+            <div class="header">
+                <div class="navigate">
+                    <ul class="menu">
+                        <li><a href="#page1">ГЛАВНАЯ</a></li>
+                        <li><a href="#page2">ВАКАНСИИ</a></li>
+                        <li><a href="#page3">О КОМПАНИИ</a></li>
+                        <li><a href="#page3">КОНТАКТЫ</a></li>
+                    </ul>
+                </div>
+                <div class=logo align=center><a href="index.html"></a>
+                </div>
+            </div>
+            <div id="container" class="cf">
+                <div id="main" role="main" align=center>
+                  <section class="slider" style="padding-top: 520px;">
+                    <div class="flexslider">
+                      <ul class="slides" align="center">
+                            <li>
+                              <img src="img/slider/1.jpg" />
+                              </li>
+                              <li>
+                              <img src="img/slider/2.jpg" />
+                              </li>
+                              <li>
+                              <img src="img/slider/3.jpg" />
+                              </li>
+                              <li>
+                              <img src="img/slider/4.jpg" />
+                              </li>
+                      </ul>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <h2>ПОИСК ВАКАНСИЙ ДЛЯ IT-СПЕЦИАЛИСТОВ</h2>
+        </div>
+        <div id="page2">
+            <h2>СОИСКАТЕЛИ</h2>
+            <div class="seeker">
+                <img src="img/avatar/1.jpg" alt="" class="avatar">
+                <h3>JS, jQuerry</h3>
+                <progress value="80" max="100"></progress>
+                <h3>Bootstrap</h3>
+                <progress value="60" max="100"></progress>
+            </div>
+            <div class="seeker2">
+                <img src="img/avatar/2.jpg" alt="" class="avatar">
+                <h3>HTML5,CSS3</h3>
+                <progress value="70" max="100"></progress>
+                <h3>C#</h3>
+                <progress value="30" max="100"></progress>
+            </div>
+            <div class="seeker3">
+                <img src="img/avatar/3.jpg" alt="" class="avatar">
+                <h3>С#</h3>
+                <progress value="90" max="100"></progress>
+                <h3>Bash</h3>
+                <progress value="20" max="100"></progress>
+            </div>
+        </div>
+        <div id="page3">
+            <video autoplay="" loop="" poster="video/background.jpg" id="bgvid" muted>
+                    <source src="video/background.webm" type="video/webm">
+                    <source src="video/background.mp4" type="video/mp4">
+            </video>
+            <div class="contact">
+                    <form action="php/form.php" method="post" name="form">
+                        <br>Имя<br><input class="inp" style="width: 80%; height: 20%;" name="name" type="text" />
+                        <br>E-mail:<br><input class="inp" style="width: 80%;height: 20%;" name="email" type="text" />
+                        <br>Телефон<br><input class="inp" style="width: 80%;height: 20%;" name="phone" type="text" />
+                        <br>Ваш текст:<br>
+                        <textarea class="inp" style="width: 80%;height: 80%;" cols="1" name="message" rows="5"></textarea><br>
+                        <button class="submit" type="submit" value="Отправить">Отправить сообщение</button>
+                    </form>
+            </div>
+            <div class="mapblock">
+                <div id="map" style="width: 500px; height: 400px"></div>
+            </div>
+            <div class="footer">
+                <div class="copyright">
+                    &copy;<a target="_blank" href="https://vk.com/creystar" title="Creystar">K.Lishavsky (Creystar)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+        function init(){     
+            myMap = new ymaps.Map("map", {
+                center: [47.148052, 39.744350],
+                zoom: 12
+            });
+            myPlacemark = new ymaps.Placemark([47.148052, 39.744350], {
+                    hintContent: 'Creystar',
+                    balloonContent: 'Creystar office'
+                });
+                myMap.geoObjects.add(myPlacemark);
+            }
+            </script>
+</body>
+</html>
